@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Circle</title>
+    <style>
+        #circle {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            font-family: "Helvetica World"; 
+            font-size: 52px;
+            font-weight: bold; 
+            letter-spacing: 13px; 
+
+            animation: fadeIn_circle 3s forwards;
+        }
+
+        #rectangle {
+            width: 250px;
+            height: 80px;
+            background-color: orange;
+            border-radius: 20px;
+            position: absolute;
+            top: 20px;
+            right: -10px;
+            animation: slideRight 2s forwards; 
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            font-family: "Helvetica World"; 
+            font-size: 18px;
+            font-weight: bold; 
+            letter-spacing: px; 
+
+        }
+
+        #rectangle2 {
+            width: 250px;
+            height: 80px;
+            background-color: orange;
+            border-radius: 20px;
+            position: absolute;
+            left: -10px;
+            bottom: 20px;
+
+            animation: slideLeft 3s forwards; 
+            opacity: 0; 
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            font-family: "Helvetica World"; 
+            font-size: 18px;
+            font-weight: bold; 
+            letter-spacing: px; 
+        }
+
+        .circle-group {
+            position: absolute;
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .circle {
+            width: 10px;
+            height: 10px;
+            background-color: grey;
+            border-radius: 50%;
+            margin: 0 2px; 
+            opacity: 0; 
+            animation: fadeIn 5s forwards; 
+        }
+
+        /* Animasi muncul dari kanan */
+        @keyframes slideRight {
+            from {
+                right: -100px;
+                opacity: 0;
+            }
+            to {
+                right: -10px;
+                opacity: 1;
+            }
+        }
+
+        /* Animasi muncul dari kiri */
+        @keyframes slideLeft {
+            from {
+                left: -100px;
+                opacity: 0;
+            }
+            to {
+                left: -10px;
+                opacity: 1;
+            }
+        }
+
+        /* Animasi fade-in */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 0.3;
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 0.3;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeIn_circle{
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="circle">
+            <p>PORTO</p>
+            <p>FOLIO</p>
+        </div>
+        <div id="rectangle">
+            <p>Abdur Rasyid Ridho</p>
+        </div>
+        <div id="rectangle2">
+            <p>Informatics Engineer</p>
+        </div>
+        <div class="circle-group" style="top: -5px; left: 0px;">
+        <!-- Grup Lingkaran Pertama -->
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="circle-group" style="top: 10px; left: 0px;">
+            <!-- Grup Lingkaran Kedua -->
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="circle-group" style="top: 25px; left: 0px;">
+            <!-- Grup Lingkaran Ketiga -->
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div> 
+        <div class="circle-group" style="top: 40px; left: 0px;">
+            <!-- Grup Lingkaran Keempat -->
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div> 
+        <div class="circle-group" style="bottom: 5px; right: 0px;">
+            <!-- Grup Lingkaran Pertama -->
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="circle-group" style="bottom: 20px; right: 0px;">
+            <!-- Grup Lingkaran Kedua -->
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="circle-group" style="bottom: 35px; right: 0px;">
+            <!-- Grup Lingkaran Ketiga -->
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+</body>
+
+</html>
